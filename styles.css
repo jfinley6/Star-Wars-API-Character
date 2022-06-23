@@ -1,0 +1,1208 @@
+@font-face {
+  font-family: "Star Jedi";
+  src: url(./Starjedi.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #7e7863;
+}
+
+#buttonDiv {
+  position: sticky;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #2e557c;
+  height: 8vh;
+  font-family: "Star Jedi";
+  align-items: center;
+}
+
+button {
+  width: 20vw;
+  font-size: 1em;
+}
+
+#previousPage,
+#nextPage {
+  font-family: "Star Jedi";
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+#previousPage:hover,
+#nextPage:hover {
+  background-color: rgb(232, 228, 228);
+  cursor: pointer;
+}
+
+#title {
+  font-size: 1.5rem;
+  color: rgb(236, 235, 235);
+}
+
+#characterTiles {
+  min-height: 91.5vh;
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: column;
+  /* grid-gap: 1px; */
+}
+
+.characterGrid {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  background-color: #ad7d37;
+  border: 2px solid black;
+  margin: 1px;
+  border-radius: 5px;
+}
+
+.characterGrid:hover {
+  background-color: #cc9645;
+  cursor: url(https://cur.cursors-4u.net/others/oth-1/oth28.cur), auto !important;
+}
+
+.characterGrid:nth-child(3) {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.characterGrid:nth-child(4) {
+  grid-area: 1 / 2 / 1 / 3;
+}
+
+.characterGrid:nth-child(5) {
+  grid-area: 1 / 3 / 1 / 4;
+}
+
+.characterGrid:nth-child(6) {
+  grid-area: 2 / 1 / 2 / 2;
+}
+
+.characterGrid:nth-child(7) {
+  grid-area: 2 / 2 / 2 / 3;
+}
+
+.characterGrid:nth-child(8) {
+  grid-area: 2 / 3 / 2 / 4;
+}
+
+.characterGrid:nth-child(9) {
+  grid-area: 3 / 1 / 3 / 2;
+}
+
+.characterGrid:nth-child(10) {
+  grid-area: 3 / 2 / 3 / 3;
+}
+
+.characterGrid:nth-child(11) {
+  grid-area: 3 / 3 / 3 / 4;
+}
+
+#pageIndicator {
+  font-size: 1.5em;
+  grid-row-start: 4;
+  grid-column-start: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  -webkit-text-stroke: 0.3px black;
+  font-family: "Star Jedi";
+}
+
+#starWarsLogo {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#starWarsLogo > img {
+  width: auto;
+  height: 15vh;
+}
+
+.characterTile {
+  grid-area: 1 / 1 / 4 / 3;
+}
+
+.characterPictureTile {
+  grid-area: 1 / 3 / 4 / 4;
+}
+
+.backButton {
+  grid-area: 4 / 2 / 5 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Star Jedi";
+  letter-spacing: 2px;
+}
+
+.backButton:hover {
+  background-color: #989177;
+  cursor: pointer;
+}
+
+.characterList {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.characterList2 {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+.characterTile {
+  font-size: 2em;
+  color: white;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.characterTile ul {
+  color: black;
+  font-size: 1.5rem;
+  height: 50%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.characterTile li {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.bg1 {
+  margin-top: 40px;
+  background-image: url(./images/Luke_Skywalker.png);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 140px;
+}
+
+.bg2 {
+  margin-top: 40px;
+  background-image: url(./images/C-3PO.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 140px;
+}
+
+.bg3 {
+  margin-top: 40px;
+  background-image: url(./images/R2-D2.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 150px;
+}
+
+.bg4 {
+  margin-top: 40px;
+  background-image: url(./images/Darth_Vader.png);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 100px;
+}
+
+.bg5 {
+  margin-top: 40px;
+  background-image: url(./images/Princess_Leia_Organa.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 135px;
+}
+
+.bg6 {
+  margin-top: 40px;
+  margin-right: 100px;
+  background-image: url(./images/Owen_Lars.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 50px;
+}
+
+.bg7 {
+  margin-top: 40px;
+  background-image: url(./images/Beru\ Lars.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 50px;
+}
+
+.bg8 {
+  margin-top: 40px;
+  background-image: url(./images/R5-D4.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 50px;
+}
+
+.bg9 {
+  margin-top: 40px;
+  background-image: url(./images/Biggs_Darklighter.jpeg);
+  background-size: 500px;
+  background-position: 80%;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 100px;
+}
+
+.bg10 {
+  margin-top: 40px;
+  background-image: url(./images/Obi_Wan_Kenobi.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 100px;
+}
+
+.bg11 {
+  margin-top: 40px;
+  background-image: url(./images/Anakin_Skywalker.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg12 {
+  margin-top: 40px;
+  background-image: url(./images/Tarkin.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg13 {
+  margin-top: 40px;
+  background-image: url(./images/Chewbacca.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg14 {
+  margin-top: 40px;
+  background-image: url(./images/Han_Solo.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg15 {
+  margin-top: 40px;
+  background-image: url(./images/Greedo.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg16 {
+  margin-top: 40px;
+  background-image: url(./images/Jabba.jpeg);
+  background-size: 450px;
+  height: 350px;
+  width: 400px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 155px;
+  top: 50px;
+}
+
+.bg18 {
+  margin-top: 40px;
+  background-image: url(./images/Wedge.jpeg);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg19 {
+  margin-top: 40px;
+  background-image: url(./images/Porkins.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg20 {
+  margin-top: 40px;
+  background-image: url(./images/Yoda.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg21 {
+  margin-top: 40px;
+  background-image: url(./images/Palpatine.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg22 {
+  margin-top: 40px;
+  background-image: url(./images/Boba_Fett.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg23 {
+  margin-top: 40px;
+  background-image: url(./images/IG-88.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg24 {
+  margin-top: 40px;
+  background-image: url(./images/Bossk.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg25 {
+  margin-top: 40px;
+  background-image: url(./images/Lando.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg26 {
+  margin-top: 40px;
+  background-image: url(./images/Lobot.jpeg);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg27 {
+  margin-top: 40px;
+  background-image: url(./images/Ackbar.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+  top: 40px;
+}
+
+.bg28 {
+  margin-top: 40px;
+  background-image: url(./images/Mon_Mothma.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg29 {
+  margin-top: 40px;
+  background-image: url(./images/Arvel-crynyd.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+  top: 40px;
+}
+
+.bg30 {
+  margin-top: 40px;
+  background-image: url(./images/Wicket_RotJ.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg31 {
+  margin-top: 40px;
+  background-image: url(./images/Nien_Nunb.jpeg);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg32 {
+  margin-top: 40px;
+  background-image: url(./images/Qui-Gon_Jinn.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg33 {
+  margin-top: 40px;
+  background-image: url(./images/Nute_Gunray.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg34 {
+  margin-top: 40px;
+  background-image: url(./images/Valorum.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg35 {
+  margin-top: 40px;
+  background-image: url(./images/Padme.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg36 {
+  margin-top: 40px;
+  background-image: url(./images/Jar_Jar_SWSB.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg37 {
+  margin-top: 40px;
+  background-image: url(./images/Roose_Tarpals.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg38 {
+  margin-top: 40px;
+  background-image: url(./images/Bossnass.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg39 {
+  margin-top: 40px;
+  background-image: url(./images/RicOlieClose.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg40 {
+  margin-top: 40px;
+  background-image: url(./images/Watto.png);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg41 {
+  margin-top: 40px;
+  background-image: url(./images/Sebulba.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg42 {
+  margin-top: 40px;
+  background-image: url(./images/Panaka.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg43 {
+  margin-top: 40px;
+  background-image: url(./images/ShmiSkywalkerLars-Databank.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg44 {
+  margin-top: 40px;
+  background-image: url(./images/Darth_Maul.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg45 {
+  margin-top: 40px;
+  background-image: url(./images/Bib_Fortuna.png);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg46 {
+  margin-top: 40px;
+  background-image: url(./images/Aayla_Secura_SWE.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg47 {
+  margin-top: 40px;
+  background-image: url(./images/RattsHS-SWE.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg48 {
+  margin-top: 40px;
+  background-image: url(./images/Dud_Bolt.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg49 {
+  margin-top: 40px;
+  background-image: url(./images/GasganoHS-SWE.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg50 {
+  margin-top: 40px;
+  background-image: url(./images/BenQuadinarosHS-SWE.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg51 {
+  margin-top: 40px;
+  background-image: url(./images/Mace_Windu.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg52 {
+  margin-top: 40px;
+  background-image: url(./images/KiAdiMundi-SWCT.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg53 {
+  margin-top: 40px;
+  background-image: url(./images/KitFisto-SithSnapshot.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg54 {
+  margin-top: 40px;
+  background-image: url(./images/EethKothCardTrader.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg55 {
+  margin-top: 40px;
+  background-image: url(./images/AdiGallia2-SWE.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg56 {
+  margin-top: 40px;
+  background-image: url(./images/SaeseeTiin-SWCT.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg57 {
+  margin-top: 40px;
+  background-image: url(./images/YaraelPoof-SWCT.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg58 {
+  margin-top: 40px;
+  background-image: url(./images/PloKoonCardTrader.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg59 {
+  margin-top: 40px;
+  background-image: url(./images/Mas_Amedda_SWCT.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg60 {
+  margin-top: 40px;
+  background-image: url(./images/Gregar_Typho.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg61 {
+  margin-top: 40px;
+  background-image: url(./images/Corde.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+  top: 40px;
+}
+
+.bg62 {
+  margin-top: 40px;
+  background-image: url(./images/ClieggLarsDetail-SWE.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg63 {
+  margin-top: 40px;
+  background-image: url(./images/Poggle_the_lesser_-_sw_card_trader.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg64 {
+  margin-top: 40px;
+  background-image: url(./images/Luminarafull.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg65 {
+  margin-top: 40px;
+  background-image: url(./images/BarrissOffee-OP.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg66 {
+  margin-top: 40px;
+  background-image: url(./images/Dorme-SWCT.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg67 {
+  margin-top: 40px;
+  background-image: url(./images/Count-dooku.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg68 {
+  margin-top: 40px;
+  background-image: url(./images/Bail_Organa_Mug.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg69 {
+  margin-top: 40px;
+  background-image: url(./images/Jango-CHRON.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg70 {
+  margin-top: 40px;
+  background-image: url(./images/Zam_Wesell_002.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg71 {
+  margin-top: 40px;
+  background-image: url(./images/Dexter_Jettser.jpg_large);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+  top: 40px;
+}
+
+.bg72 {
+  margin-top: 40px;
+  background-image: url(./images/Lama_Su.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg73 {
+  margin-top: 40px;
+  background-image: url(./images/TaunWe.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg74 {
+  margin-top: 40px;
+  background-image: url(./images/Jocasta_Nu.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg75 {
+  margin-top: 40px;
+  background-image: url(./images/R4-P17_USWNE.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg76 {
+  margin-top: 40px;
+  background-image: url(./images/Wat_Tambor.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg77 {
+  margin-top: 40px;
+  background-image: url(./images/SanHillHS-AOTC.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg78 {
+  margin-top: 40px;
+  background-image: url(./images/Shaak_Ti_closeup-SWE.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg79 {
+  margin-top: 40px;
+  background-image: url(./images/Grievoushead.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg80 {
+  margin-top: 40px;
+  background-image: url(./images/360px-Tarfful_OP.webp);
+  background-size: 300px;
+  height: 350px;
+  width: 300px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+}
+
+.bg81 {
+  margin-top: 40px;
+  background-image: url(./images/Raymus_Antilles.webp);
+  background-size: 650px;
+  width: 350px;
+  background-repeat: no-repeat;
+  grid-area: 1 / 3 / 4 / 4;
+  position: relative;
+  right: 115px;
+  top: 40px;
+}
+
+@media all and (max-width: 820px) {
+  #characterTiles {
+    grid-template-columns: minmax(0,1fr);
+    grid-template-rows: auto;
+  }
+
+  #starWarsLogo {
+    display: none;
+  }
+
+  .characterGrid:nth-child(3) {
+  grid-area: unset;
+}
+
+.characterGrid:nth-child(4) {
+  grid-area: unset;
+}
+
+.characterGrid:nth-child(5) {
+  grid-area: unset;
+}
+
+.characterGrid:nth-child(6) {
+  grid-area: unset;
+}
+
+.characterGrid:nth-child(7) {
+  grid-area: unset;
+}
+
+.characterGrid:nth-child(8) {
+  grid-area: unset;
+}
+
+.characterGrid:nth-child(9) {
+  grid-area: unset;
+}
+
+.characterGrid:nth-child(10) {
+  grid-area: unset;
+}
+
+.characterGrid:nth-child(11) {
+  grid-area: unset
+}
+
+}
