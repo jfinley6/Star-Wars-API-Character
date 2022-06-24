@@ -1160,13 +1160,17 @@ button {
 }
 
 @media all and (max-width: 820px) {
- 
+ body {
+  height: 100vh;
+  width: 100vw;
+ }
 
   #characterTiles {
     grid-template-columns: 100%;
     grid-template-rows: repeat(11, 1fr);
     justify-content: center;
   }
+
 
   #previousPage,
   #nextPage {
