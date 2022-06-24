@@ -162,6 +162,7 @@ function turnOffDisplay(domElement) {
 
 //Create div for selected character
 function buildTile(data) {
+    pageIndicator.style.display = "none"
     deleteCharacterTiles();
     turnOffDisplay(previousPage);
     turnOffDisplay(nextPage);
@@ -170,7 +171,8 @@ function buildTile(data) {
     document.getElementById("characterTiles").appendChild(characterTile);
     let characterPictureTile = document.createElement('div')
     let addClass = data.url.slice(29, -1)
-    characterPictureTile.classList.add(`bg${addClass}`)
+    characterPictureTile.classList.add(`bg${addClass}`);
+    characterPictureTile.classList.add("pictureTile")
     document.getElementById("characterTiles").appendChild(characterPictureTile);
     let backButton = document.createElement('div')
     backButton.classList.add("backButton")
@@ -183,6 +185,7 @@ function buildTile(data) {
         backButton.remove();
         previousPage.style.display = ""
         nextPage.style.display = ""
+        pageIndicator.style.display = "flex"
         loadCharacters();
     })
     let characterList = document.createElement("ul");
@@ -205,7 +208,7 @@ function buildTile(data) {
     listItem7.innerHTML = `Gender: <strong>${data.gender}</strong>`;;
 
     let listArray = [listItem1, listItem2, listItem3, listItem4, listItem5, listItem6, listItem7]
-    for (i=0; i < listArray.length; i++) {
+    for (i = 0; i < listArray.length; i++) {
         document.querySelector(".characterList").appendChild(listArray[i]);
     }
 }
