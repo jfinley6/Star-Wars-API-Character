@@ -1159,7 +1159,7 @@ button {
   top: 40px;
 }
 
-@media all and (max-width: 820px) {
+/* @media all and (max-width: 820px) {
   #characterTiles {
     grid-template-columns: minmax(0,1fr);
     grid-template-rows: auto;
@@ -1205,4 +1205,4 @@ button {
   grid-area: unset
 }
 
-}
+} */
