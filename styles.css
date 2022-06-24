@@ -21,7 +21,7 @@ body {
 
 button {
   width: 20vw;
-  font-size: 1em;
+  font-size: 0.7em;
 }
 
 #previousPage,
@@ -1159,14 +1159,21 @@ button {
   top: 40px;
 }
 
-/* @media all and (max-width: 820px) {
+@media all and (max-width: 820px) {
   #characterTiles {
-    grid-template-columns: minmax(0,1fr);
-    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(10, 1fr);
+    justify-content: center;
+    height: 50%;
   }
 
   #starWarsLogo {
     display: none;
+
+  }
+
+  #pageIndicator {
+    grid-area: unset;
   }
 
   .characterGrid:nth-child(3) {
@@ -1205,4 +1212,8 @@ button {
   grid-area: unset
 }
 
-} */
+.characterGrid:nth-child(12) {
+  grid-area: 11 / 1 / 12 / 1
+}
+
+}
