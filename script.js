@@ -156,8 +156,16 @@ function buildTiles(data) {
 }
 
 //Makes the dom element hidden
-function turnOffDisplay(domElement) {
+function turnOffDisplay(domElement, div) {
     domElement.style.display = "none"
+}
+
+//Create element with class and append it to another element
+function newElement(domItem, element, className, elementID) {
+    domItem = document.createElement(element);
+    console.log(domItem)
+    domItem.classList.add(className);
+    document.getElementById(elementID).appendChild(domItem);
 }
 
 //Create div for selected character
@@ -166,6 +174,7 @@ function buildTile(data) {
     deleteCharacterTiles();
     turnOffDisplay(previousPage);
     turnOffDisplay(nextPage);
+    // newElement("characterTile", "div", "characterTile", "characterTiles");
     let characterTile = document.createElement('div')
     characterTile.classList.add("characterTile")
     document.getElementById("characterTiles").appendChild(characterTile);
